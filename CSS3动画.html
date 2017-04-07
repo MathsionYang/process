@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>webkitAnimationEnd</title>
+<style type="text/css">
+body {
+  background: #161616 url(pattern_40.gif) top left repeat;
+  margin: 0;
+  padding: 0;
+  font: 12px normal Verdana, Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+#div1{
+  width:100%; 
+  height:10px; 
+  margin:2px 0; 
+  background:#2187e7; 
+  position:absolute;
+  top:70%;
+  box-shadow:0px 0px 10px 1px rgba(0,198,255,0.7);/*进度条阴影*/
+  -moz-animation:fullexpand 10s ease-out;
+  -webkit-animation: fullexpand  3s 2 ease;
+}
+@-webkit-keyframes fullexpand {
+    0%  { width:0px;}
+  100%{ width:100%;
+}
+</style>
+</head>
+<body>
+<div id="div1"></div>
+<script type="text/javascript">
+var o = document.getElementById("div1");
+// 动画开始时事件
+/*<!-- o.addEventListener("webkitAnimationStart", function() { -->
+    
+<!-- }) -->
+<!-- // 动画重复运动时事件 -->
+
+<!-- }) -->*/
+o.addEventListener("webkitAnimationIteration", function() {
+    alert("动画重复运动");})
+// 动画结束时事件
+<!-- o.addEventListener("webkitAnimationEnd", function() { -->
+    <!-- this.className = ""; -->
+    <!-- //window.location.href="http://news.qq.com"; -->
+	<!-- alert("加油");  -->
+<!-- }) -->
+</script>
+ <div id="loading-outer">
+        <div id="loading-outer-overlay"></div>
+        <div id="loading-inner">
+		<!-- <div id="loadingAppLogo"><span><img src="image/321.jpg" height="70" alt="Logo" /></span></div> -->
+            <h1 id="loadingAppTitle"  align="center" style="color:white;font-size:50px">DJ_Mathsion</h1>
+            <h2 id="loadingMessage"><span><img src="image/3214.jpg"  width="400px"; height="500px"; style="position:absolute; left:40%; top:100px; "/></h2>
+            <!-- <ul id="loadingImage"> -->
+                <!-- <li   > -->
+				<!-- </li> -->
+                <!-- <li><img src="image/app/321.jpg" height="70" alt="Logo" /></li> -->
+                <!-- <li></li> -->
+                <!-- <li></li> -->
+                <!-- <li></li> -->
+            <!-- </ul> -->
+       <!-- <div id="loginContainer"></div> -->
+           
+        </div>
+    </div>
+</body>
+</html>
